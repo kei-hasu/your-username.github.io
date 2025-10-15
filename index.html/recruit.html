@@ -120,7 +120,7 @@
 
     <section>
       <h2>応募フォーム</h2>
-      <form action="thanks.html" method="post">
+      <form onsubmit="event.preventDefault(); location.href='thanks.html';">
         <label for="name">お名前</label>
         <input type="text" name="name" id="name">
 
@@ -139,4 +139,5 @@
     &copy; 2025 デモサイト
   </footer>
 </body>
+
 </html>
