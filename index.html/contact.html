@@ -80,7 +80,7 @@
   </header>
 
   <main>
-    <form action="thanks.html" method="post">
+    <form onsubmit="event.preventDefault(); location.href='thanks.html';">
       <label for="name">お名前</label>
       <input id="name" type="text" name="name">
 
