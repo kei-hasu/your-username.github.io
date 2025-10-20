@@ -151,5 +151,26 @@ src="https://www.facebook.com/tr?id=1156584469631096&ev=PageView&noscript=1"
       });
     });
   </script>
+  
+  <script>
+    /* 追加：Meta Pixel にリンククリックを送信 */
+    const contactLink = document.querySelector('#contact-tab a[href="contact.html"]');
+    const companyLink = document.querySelector('#company a[href="company.html"]');
+
+    if (contactLink) {
+      contactLink.addEventListener('click', () => {
+        fbq('trackCustom', 'ContactLinkClick');
+        console.log('お問い合わせリンクがクリックされました');
+      });
+    }
+
+    if (companyLink) {
+      companyLink.addEventListener('click', () => {
+        fbq('trackCustom', 'CompanyLinkClick');
+        console.log('会社概要リンクがクリックされました');
+      });
+    }
+  </script>
 </body>
+
 </html>
